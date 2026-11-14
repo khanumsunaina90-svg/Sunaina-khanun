@@ -22,7 +22,7 @@ app.use('/api/transactions', transactionsRouter);
 app.use('/api/budgets', budgetsRouter);
 
 // 404 for unknown API routes
-app.use('/api/*', require('./middleware/notFound'));
+app.use('/api', require('./middleware/notFound'));
 
 // Central error handling
 app.use(require('./middleware/errorHandler'));
